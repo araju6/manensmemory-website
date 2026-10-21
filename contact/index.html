@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; font-src 'self'; img-src 'self'; base-uri 'none'; form-action https://api.web3forms.com">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="robots" content="index, follow">
+
+<title>Become a design partner — Manens</title>
+<meta name="description" content="Tell us about the robots you're building or deploying, and what you'd need from a persistent site memory.">
+<link rel="canonical" href="https://manensmemory.com/contact/">
+<meta name="theme-color" content="#15140F">
+<meta name="color-scheme" content="dark">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Manens">
+<meta property="og:url" content="https://manensmemory.com/contact/">
+<meta property="og:title" content="Become a design partner — Manens">
+<meta property="og:description" content="Tell us about the robots you're building or deploying, and what you'd need from a persistent site memory.">
+<meta property="og:image" content="https://manensmemory.com/og.png">
+
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="preload" href="../fonts/source-sans-3-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../fonts/instrument-serif-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="shell header-inner">
+    <a class="wordmark" href="../" aria-label="Manens, home">
+      <svg class="wordmark-mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+        <rect x="7.5" y="7.5" width="11" height="11" rx="1.5" fill="none" stroke="currentColor" stroke-width="2.4"/>
+        <path d="M13.5 24.5h11v-11" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-dasharray="0.1 4.4"/>
+      </svg>
+      <span>Manens</span>
+    </a>
+    <a class="link-arrow" href="../"><span aria-hidden="true">&larr;</span> Back</a>
+  </div>
+</header>
+
+<main id="main">
+  <section class="form-section">
+    <div class="shell">
+      <div class="measure">
+      <h1 class="display">Become a design partner</h1>
+      <p class="lede">We're working with a small number of teams building and deploying robots. Tell us what you're working on and we'll get back to you.</p>
+
+      <!--
+        Web3Forms relays this to the address verified against the access key.
+        The destination address is never present in this page.
+        See README.md → "The contact form" before changing anything here.
+      -->
+      <form class="form" action="https://api.web3forms.com/submit" method="POST">
+
+        <input type="hidden" name="access_key" value="5e829d3a-5028-4300-98e3-d2602bb4ca64">
+        <input type="hidden" name="subject" value="Manens — new design partner enquiry">
+        <input type="hidden" name="from_name" value="manensmemory.com">
+        <input type="hidden" name="redirect" value="https://manensmemory.com/contact/thanks/">
+
+        <!-- Honeypot: hidden from people, filled in by bots. Do not remove. -->
+        <input type="checkbox" name="botcheck" class="botcheck" tabindex="-1" autocomplete="off">
+
+        <div class="field">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" autocomplete="name" required>
+        </div>
+
+        <div class="field">
+          <label for="email">Work email</label>
+          <input id="email" name="email" type="email" autocomplete="email" required
+                 aria-describedby="email-hint">
+          <p class="hint" id="email-hint">We'll reply here.</p>
+        </div>
+
+        <div class="field">
+          <label for="company">Company <span class="optional">(optional)</span></label>
+          <input id="company" name="company" type="text" autocomplete="organization">
+        </div>
+
+        <div class="field">
+          <label for="message">What are you working on?</label>
+          <textarea id="message" name="message" rows="6" required
+                    aria-describedby="message-hint"></textarea>
+          <p class="hint" id="message-hint">Robots you build or deploy, the sites they work in, and what you'd need from a pilot.</p>
+        </div>
+
+        <button class="btn btn-primary" type="submit">Send</button>
+      </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="shell footer-inner">
+    <p>&copy; 2026 Manens</p>
+  </div>
+</footer>
+
+</body>
+</html>

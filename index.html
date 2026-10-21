@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- GitHub Pages cannot set HTTP headers, so policy is declared in-document.
+     frame-ancestors / X-Frame-Options are header-only and cannot be set here. -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; script-src 'sha256-enfUzPpAYzPfDUqYpGEoIjTChElfUc+Kkc0Qh0OIrBc='; font-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="robots" content="index, follow, max-image-preview:large">
+
+<title>Manens: persistent memory for robots</title>
+<meta name="description" content="Manens is a shared, persistent memory of the place a robot works in. It tracks how the place changes, carries over to new models and new robots, and enforces the site's rules.">
+<link rel="canonical" href="https://manensmemory.com/">
+<meta name="theme-color" content="#15140F">
+<meta name="color-scheme" content="dark">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Manens">
+<meta property="og:url" content="https://manensmemory.com/">
+<meta property="og:title" content="Manens: persistent memory for robots">
+<meta property="og:description" content="A shared memory of the place a robot works in. It tracks how the place changes, carries over to new models and new robots, and enforces the place's rules.">
+<meta property="og:image" content="https://manensmemory.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Manens — persistent, dynamic memory for robots">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Manens: persistent memory for robots">
+<meta name="twitter:description" content="A shared memory of the place a robot works in. It tracks how the place changes, carries over to new models and new robots, and enforces the place's rules.">
+<meta name="twitter:image" content="https://manensmemory.com/og.png">
+<meta name="twitter:image:alt" content="Manens — persistent, dynamic memory for robots">
+
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+<!-- Fonts are self-hosted; the page makes no third-party requests. -->
+<link rel="preload" href="fonts/source-sans-3-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/instrument-serif-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="style.css">
+
+<!-- Structured data. NOTE: if you edit this block, the CSP hash above must be
+     regenerated — see README.md, "Editing the structured data". -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Manens",
+  "url": "https://manensmemory.com/",
+  "logo": "https://manensmemory.com/favicon.svg",
+  "description": "Manens is a shared, persistent memory of the place a robot works in. It tracks how the place changes, carries over to new models and new robots, and enforces the site's rules."
+}
+</script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="shell header-inner">
+    <a class="wordmark" href="#top" aria-label="Manens, home">
+      <svg class="wordmark-mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+        <rect x="7.5" y="7.5" width="11" height="11" rx="1.5" fill="none" stroke="currentColor" stroke-width="2.4"/>
+        <path d="M13.5 24.5h11v-11" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-dasharray="0.1 4.4"/>
+      </svg>
+      <span>Manens</span>
+    </a>
+
+    <a class="btn btn-primary btn-sm" href="contact/">Become a design partner</a>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ───────────────── Hero ───────────────── -->
+  <section class="hero" id="top">
+    <div class="shell">
+      <h1 class="display">Persistent, dynamic memory for robots</h1>
+      <p class="lede">A shared memory of the place a robot works in. It tracks how the place changes, carries over to new models and new robots, and enforces the place's rules.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="contact/">Become a design partner</a>
+        <a class="link-arrow" href="#how">How it works <span aria-hidden="true">&darr;</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────────── Problem ───────────────── -->
+  <section class="section" id="product" aria-labelledby="product-title">
+    <div class="shell">
+      <h2 class="display" id="product-title">Robots start over every day</h2>
+
+      <ul class="card-grid">
+        <li class="card">
+          <h3>Where things are</h3>
+          <p>Robots don't reliably remember where things are in a specific warehouse, factory, hospital, hotel or home.</p>
+        </li>
+        <li class="card">
+          <h3>The site's rules</h3>
+          <p>&ldquo;Aisle 4 is closed until 3pm.&rdquo; &ldquo;No robots in Zone B during shift change.&rdquo; Rules told to a model in a prompt get ignored.</p>
+        </li>
+        <li class="card">
+          <h3>Any of it after a change</h3>
+          <p>A model update or a new robot wipes what was learned about the place.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ───────────────── Features ───────────────── -->
+  <section class="section" aria-labelledby="building-title">
+    <div class="shell">
+      <h2 class="display" id="building-title">One memory per place</h2>
+
+      <ul class="feature-grid">
+        <li class="feature">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M21 12a9 9 0 1 1-3.2-6.9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            <path d="M21 4v5h-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <h3>Dynamic</h3>
+          <p>Tracks where each object probably is, how sure we are, and what changed.</p>
+        </li>
+        <li class="feature">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <ellipse cx="12" cy="6" rx="7.5" ry="3" fill="none" stroke="currentColor" stroke-width="1.6"/>
+            <path d="M4.5 6v12c0 1.7 3.4 3 7.5 3s7.5-1.3 7.5-3V6" fill="none" stroke="currentColor" stroke-width="1.6"/>
+            <path d="M4.5 12c0 1.7 3.4 3 7.5 3s7.5-1.3 7.5-3" fill="none" stroke="currentColor" stroke-width="1.6"/>
+          </svg>
+          <h3>Persistent</h3>
+          <p>Belongs to the site, not the model. Survives model updates and new robots.</p>
+        </li>
+        <li class="feature">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M12 2.8 20 6v6c0 4.7-3.3 8.3-8 9.2-4.7-.9-8-4.5-8-9.2V6z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+            <path d="M9 12.3l2.1 2.1L15.4 10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <h3>Enforced</h3>
+          <p>Checks every step against the site's rules before it runs, and blocks violations.</p>
+        </li>
+        <li class="feature">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <circle cx="12" cy="12" r="2.6" fill="none" stroke="currentColor" stroke-width="1.6"/>
+            <circle cx="4.5" cy="5.5" r="2.2" fill="none" stroke="currentColor" stroke-width="1.6"/>
+            <circle cx="19.5" cy="5.5" r="2.2" fill="none" stroke="currentColor" stroke-width="1.6"/>
+            <circle cx="12" cy="20.5" r="2.2" fill="none" stroke="currentColor" stroke-width="1.6"/>
+            <path d="M6.2 7.1l3.9 3.3M17.8 7.1l-3.9 3.3M12 14.6v3.7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+          <h3>Shared</h3>
+          <p>Every robot, from any maker, plus cameras and sensors, updates the same memory.</p>
+        </li>
+        <li class="feature">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M9 3.2 3.4 5.6v15.2L9 18.4l6 2.4 5.6-2.4V3.2L15 5.6z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+            <path d="M9 3.2v15.2M15 5.6v15.2" fill="none" stroke="currentColor" stroke-width="1.6"/>
+          </svg>
+          <h3>Spatial</h3>
+          <p>A shared map, so a new robot is useful on day one and takes faster routes.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ───────────────── How it works ───────────────── -->
+  <section class="section" id="how" aria-labelledby="how-title">
+    <div class="shell">
+      <h2 class="display" id="how-title">Plugs in beside the planner</h2>
+      <p class="section-lede">Manens is an SDK that sits next to a robot's planner. It never touches model weights or motor control.</p>
+
+      <ol class="steps">
+        <li class="step">
+          <span class="step-num">1</span>
+          <h3>Reads</h3>
+          <p>What robots and sensors see.</p>
+        </li>
+        <li class="step">
+          <span class="step-num">2</span>
+          <h3>Serves</h3>
+          <p>Memory to the planner as simple tools.</p>
+        </li>
+        <li class="step">
+          <span class="step-num">3</span>
+          <h3>Checks</h3>
+          <p>Each step before it runs, allow or block, with a reason.</p>
+        </li>
+      </ol>
+
+      <figure class="diagram">
+        <!-- Wide diagram (tablet + desktop) -->
+        <svg class="diagram-svg diagram-wide" viewBox="0 0 680 284" role="img" aria-labelledby="diagram-title diagram-desc">
+          <title id="diagram-title">Where Manens sits in the robot stack</title>
+          <desc id="diagram-desc">Four stacked layers, top to bottom: Planner, Navigation, Skill policy (VLA) and Motor control. A Manens block sits to the right, connected to the Planner and Navigation layers. Motor control has no connection and is untouched.</desc>
+
+          <g class="d-line">
+            <path d="M398 56 H468" />
+            <path d="M398 118 H468" />
+          </g>
+          <circle class="d-dot" cx="398" cy="56" r="3"/>
+          <circle class="d-dot" cx="398" cy="118" r="3"/>
+
+          <g class="d-layer">
+            <rect x="40" y="30" width="358" height="52" rx="5"/>
+            <text x="62" y="61">Planner</text>
+          </g>
+          <g class="d-layer">
+            <rect x="40" y="92" width="358" height="52" rx="5"/>
+            <text x="62" y="123">Navigation</text>
+          </g>
+          <g class="d-layer">
+            <rect x="40" y="154" width="358" height="52" rx="5"/>
+            <text x="62" y="185">Skill policy (VLA)</text>
+          </g>
+          <g class="d-layer d-untouched">
+            <rect x="40" y="216" width="358" height="52" rx="5"/>
+            <text x="62" y="247">Motor control</text>
+          </g>
+          <text class="d-note" x="418" y="247">not touched</text>
+
+          <g class="d-manens">
+            <rect x="468" y="30" width="172" height="114" rx="5"/>
+            <text x="554" y="94" text-anchor="middle">Manens</text>
+          </g>
+          <text class="d-label" x="554" y="20" text-anchor="middle">plugs in here</text>
+        </svg>
+
+        <!-- Narrow diagram (phones) -->
+        <svg class="diagram-svg diagram-narrow" viewBox="0 0 340 286" role="img" aria-labelledby="diagram-title-s diagram-desc-s">
+          <title id="diagram-title-s">Where Manens sits in the robot stack</title>
+          <desc id="diagram-desc-s">Four stacked layers, top to bottom: Planner, Navigation, Skill policy (VLA) and Motor control. A Manens block sits to the right, connected to the Planner and Navigation layers. Motor control has no connection and is untouched.</desc>
+
+          <g class="d-line">
+            <path d="M206 54 H232" />
+            <path d="M206 112 H232" />
+          </g>
+          <circle class="d-dot" cx="206" cy="54" r="2.5"/>
+          <circle class="d-dot" cx="206" cy="112" r="2.5"/>
+
+          <g class="d-layer">
+            <rect x="8" y="32" width="198" height="46" rx="5"/>
+            <text x="24" y="60">Planner</text>
+          </g>
+          <g class="d-layer">
+            <rect x="8" y="90" width="198" height="46" rx="5"/>
+            <text x="24" y="118">Navigation</text>
+          </g>
+          <g class="d-layer">
+            <rect x="8" y="148" width="198" height="46" rx="5"/>
+            <text x="24" y="176">Skill policy (VLA)</text>
+          </g>
+          <g class="d-layer d-untouched">
+            <rect x="8" y="206" width="198" height="46" rx="5"/>
+            <text x="24" y="234">Motor control</text>
+          </g>
+          <text class="d-note" x="24" y="272">Motor control is not touched</text>
+
+          <g class="d-manens">
+            <rect x="232" y="32" width="100" height="104" rx="5"/>
+            <text x="282" y="90" text-anchor="middle">Manens</text>
+          </g>
+          <text class="d-label" x="282" y="22" text-anchor="middle">plugs in here</text>
+        </svg>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ───────────────── Example ───────────────── -->
+  <section class="section" id="use-cases" aria-labelledby="example-title">
+    <div class="shell">
+      <h2 class="display" id="example-title">A warehouse with mixed robots</h2>
+
+      <ol class="timeline">
+        <li>
+          <span class="when">Monday</span>
+          <p>A supervisor closes aisle 4 until 3pm. Every robot gets the rule.</p>
+        </li>
+        <li>
+          <span class="when">Monday, 1pm</span>
+          <p>A robot is routed through aisle 4. Manens blocks the step and it reroutes.</p>
+        </li>
+        <li>
+          <span class="when">Tuesday</span>
+          <p>A forklift moves a pallet. A camera updates memory, and the next robot goes straight there.</p>
+        </li>
+        <li>
+          <span class="when">Month 2</span>
+          <p>A robot from another maker arrives and knows the site on day one.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ───────────────── Contact ───────────────── -->
+  <section class="section section-contact" id="contact" aria-labelledby="contact-title">
+    <div class="shell">
+      <div class="contact-card">
+        <h2 class="display" id="contact-title">We're looking for design partners</h2>
+        <p class="section-lede">We're working with a small number of teams building and deploying robots. If memory, site rules or robot handoff matter to you, we'd love to talk.</p>
+        <a class="btn btn-primary" href="contact/">Get in touch</a>
+        <p class="footnote">Or tell us what you'd need for a pilot.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="shell footer-inner">
+    <p>&copy; 2026 Manens</p>
+    <p><a href="contact/">Contact us</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
