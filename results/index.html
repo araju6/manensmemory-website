@@ -7,7 +7,7 @@
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="robots" content="index, follow">
 
-<title>manens – simulation results</title>
+<title>Manens – Simulation results</title>
 <meta name="description" content="What a simple persistent memory of a home did for a simulated household robot across 24,000 tasks: task success, rule violations, and whether a new robot can inherit the memory.">
 <meta name="theme-color" content="#ffffff">
 <meta name="color-scheme" content="light">
@@ -19,80 +19,80 @@
 </head>
 <body>
 
-<a class="skip-link" href="#main">skip to content</a>
+<a class="skip-link" href="#main">Skip to content</a>
 
 <header class="nav">
   <a class="wordmark" href="../">
     <span class="blink" aria-hidden="true"></span>
-    <span>manens memory</span>
+    <span>Manens Memory</span>
   </a>
-  <nav class="tabs" aria-label="sections">
-    <a href="../#product">product</a>
-    <a href="./" class="active">results</a>
-    <a href="../#environment">env<span class="tab-long">ironment</span></a>
-    <a href="../#how">how<span class="tab-long"> it works</span></a>
-    <a href="../#contact">contact</a>
+  <nav class="tabs" aria-label="Sections">
+    <a href="../#product">Product</a>
+    <a href="./" class="active">Results</a>
+    <a href="../#environment">Env<span class="tab-long">ironment</span></a>
+    <a href="../#how">How<span class="tab-long"> it works</span></a>
+    <a href="../#contact">Contact</a>
   </nav>
 </header>
 
 <main id="main" class="page">
 
   <section class="section section-first">
-    <p class="label">results</p>
-    <h1 class="display">what a memory of the home did, <em>in simulation.</em></h1>
-    <p class="lede">before building anything for real sites, we wanted one question answered: if a robot could read a simple, persistent memory of the place it works in, would it do its job better? we ran that as a controlled simulation. this page is the setup, the numbers, and what they do not show.</p>
+    <p class="label">Results</p>
+    <h1 class="display">What a memory of the home did, <em>in simulation.</em></h1>
+    <p class="lede">Before building anything for real sites, we wanted one question answered: if a robot could read a simple, persistent memory of the place it works in, would it do its job better? We ran that as a controlled simulation. This page is the setup, the numbers, and what they do not show.</p>
   </section>
 
   <section class="section">
-    <p class="label">setup</p>
-    <h2 class="display-sm">the same robot, the same homes, twice.</h2>
+    <p class="label">Setup</p>
+    <h2 class="display-sm">The same robot, the same homes, twice.</h2>
     <div class="prose-grid">
       <div>
-        <p>we simulated a household robot working through everyday tasks: putting things away, fetching things, moving between rooms, following the household's instructions. each home has its own layout, its own preferences and its own rules.</p>
-        <p>every task was run in two conditions with the same model, the same homes and the same task list:</p>
+        <p>We simulated a household robot working through everyday tasks: putting things away, fetching things, moving between rooms, following the household's instructions. Each home has its own layout, its own preferences and its own rules.</p>
+        <p>Every task was run in two conditions with the same model, the same homes and the same task list:</p>
       </div>
       <dl class="conditions">
         <div>
-          <dt>without memory</dt>
-          <dd>the robot starts each task knowing only what its training taught it. nothing about this home carries over from one task to the next.</dd>
+          <dt>Without memory</dt>
+          <dd>The robot starts each task knowing only what its training taught it. Nothing about this home carries over from one task to the next.</dd>
         </div>
         <div>
-          <dt><span class="blink" aria-hidden="true"></span>with memory</dt>
-          <dd>the robot can read a simple text memory of this home before and during the task. the memory is written by the home, not by the robot's model, and persists across tasks.</dd>
+          <dt><span class="blink" aria-hidden="true"></span>With memory</dt>
+          <dd>The robot can read a simple text memory of this home before and during the task. The memory is written by the home, not by the robot's model, and persists across tasks.</dd>
         </div>
       </dl>
     </div>
     <dl class="facts">
-      <div><dt>tasks</dt><dd>24,000</dd></div>
-      <div><dt>simulated time</dt><dd>about 500 hours</dd></div>
-      <div><dt>environment</dt><dd>households</dd></div>
-      <div><dt>memory form</dt><dd>plain text, the simplest baseline</dd></div>
+      <div><dt>Tasks</dt><dd>24,000</dd></div>
+      <div><dt>Simulated time</dt><dd>About 500 hours</dd></div>
+      <div><dt>Environment</dt><dd>Households</dd></div>
+      <div><dt>Memory form</dt><dd>Plain text, the simplest baseline</dd></div>
     </dl>
   </section>
 
   <section class="section">
-    <p class="label">what the memory held</p>
-    <h2 class="display-sm">deliberately simple.</h2>
-    <p class="lede">we used the plainest memory that could work, so that any improvement is due to the fact of having one, not to a clever representation.</p>
+    <p class="label">What the memory held</p>
+    <h2 class="display-sm">Deliberately simple.</h2>
+    <p class="lede">We used the plainest memory that could work, so that any improvement is due to the fact of having one, not to a clever representation.</p>
     <div class="held">
       <div class="held-item">
-        <p class="held-title">preferences</p>
-        <p>how the household likes things done: which shelf the glasses go on, when the family eats, what stays where.</p>
+        <p class="held-title">Preferences</p>
+        <p>How the household likes things done: which shelf the glasses go on, when the family eats, what stays where.</p>
       </div>
       <div class="held-item">
-        <p class="held-title">rules</p>
-        <p>what the robot must not do in this home: rooms not to enter after a certain hour, things not to move.</p>
+        <p class="held-title">Rules</p>
+        <p>What the robot must not do in this home: rooms not to enter after a certain hour, things not to move.</p>
       </div>
       <div class="held-item">
-        <p class="held-title">object locations</p>
-        <p>where the robot last placed or saw an object.</p>
+        <p class="held-title">Object locations</p>
+        <p>Where the robot last placed or saw an object.</p>
       </div>
       <div class="held-item">
-        <p class="held-title">location probabilities</p>
-        <p>where an object is most likely to be, when it has been seen in several places.</p>
+        <p class="held-title">Location probabilities</p>
+        <p>Where an object is most likely to be, when it has been seen in several places.</p>
       </div>
     </div>
-    <pre class="q"><code><span class="c"># the kind of entry the robot could read</span>
+    <pre class="q"><code><span class="c"># The kind of entry the robot could read</span>
 env_home_12
 prefs    glasses → left shelf, top
          the family eats at 19:00
@@ -102,89 +102,89 @@ objects  keys → hallway bowl        p=0.92
   </section>
 
   <section class="section">
-    <p class="label">measurements</p>
-    <h2 class="display-sm">three questions, three numbers.</h2>
+    <p class="label">Measurements</p>
+    <h2 class="display-sm">Three questions, three numbers.</h2>
 
     <div class="measure">
       <div class="measure-text">
-        <h3>01 · does it finish more tasks?</h3>
-        <p>a task counts as completed only if the end state matches what was asked, including the household's preferences. a glass put on the wrong shelf is not a completed task.</p>
+        <h3>01 · Does it finish more tasks?</h3>
+        <p>A task counts as completed only if the end state matches what was asked, including the household's preferences. A glass put on the wrong shelf is not a completed task.</p>
       </div>
       <div class="measure-chart">
         <svg viewBox="0 0 400 64" class="bars" role="img" aria-label="64 percent without memory, 83 percent with memory">
-          <text x="0" y="14" font-family="Geist Mono, monospace" font-size="11" fill="#6f6f6f">without</text>
-          <rect x="80" y="4" width="186" height="14" fill="#cfcfcf"/>
+          <text x="0" y="14" font-family="Geist Mono, monospace" font-size="11" fill="#6f6f6f">Without</text>
+          <rect x="80" y="4" width="186" height="14" rx="2" fill="#cfcfcf"/>
           <text x="272" y="15" font-family="Geist Mono, monospace" font-size="11" fill="#6f6f6f">64%</text>
-          <text x="0" y="46" font-family="Geist Mono, monospace" font-size="11" fill="#111">with</text>
-          <rect x="80" y="36" width="241" height="14" fill="#d1201a"/>
+          <text x="0" y="46" font-family="Geist Mono, monospace" font-size="11" fill="#111">With</text>
+          <rect x="80" y="36" width="241" height="14" rx="2" fill="#d1201a"/>
           <text x="327" y="47" font-family="Geist Mono, monospace" font-size="11" fill="#b81a15">83%</text>
         </svg>
-        <p class="result-delta"><em>+19 points</em> · tasks completed successfully</p>
+        <p class="result-delta"><em>+19 points</em> · Tasks completed successfully</p>
       </div>
     </div>
 
     <div class="measure">
       <div class="measure-text">
-        <h3>02 · does it break fewer rules?</h3>
-        <p>a rule violation is any task during which the robot did something the home had forbidden, whether or not the task was otherwise completed. with memory, the rules were served to the robot with every task.</p>
+        <h3>02 · Does it break fewer rules?</h3>
+        <p>A rule violation is any task during which the robot did something the home had forbidden, whether or not the task was otherwise completed. With memory, the rules were served to the robot with every task.</p>
       </div>
       <div class="measure-chart">
         <svg viewBox="0 0 400 64" class="bars" role="img" aria-label="15 percent without memory, 0 percent with memory">
-          <text x="0" y="14" font-family="Geist Mono, monospace" font-size="11" fill="#6f6f6f">without</text>
-          <rect x="80" y="4" width="44" height="14" fill="#cfcfcf"/>
+          <text x="0" y="14" font-family="Geist Mono, monospace" font-size="11" fill="#6f6f6f">Without</text>
+          <rect x="80" y="4" width="44" height="14" rx="2" fill="#cfcfcf"/>
           <text x="130" y="15" font-family="Geist Mono, monospace" font-size="11" fill="#6f6f6f">15%</text>
-          <text x="0" y="46" font-family="Geist Mono, monospace" font-size="11" fill="#111">with</text>
+          <text x="0" y="46" font-family="Geist Mono, monospace" font-size="11" fill="#111">With</text>
           <rect x="80" y="36" width="2" height="14" fill="#d1201a"/>
           <text x="88" y="47" font-family="Geist Mono, monospace" font-size="11" fill="#b81a15">0%</text>
         </svg>
-        <p class="result-delta"><em>none</em> · tasks with a rule violation</p>
+        <p class="result-delta"><em>None</em> · Tasks with a rule violation</p>
       </div>
     </div>
 
     <div class="measure">
       <div class="measure-text">
-        <h3>03 · can a new robot inherit it?</h3>
-        <p>this is the test that matters for the idea. we took a robot that had never been in the home, gave it the memory written during the previous robot's time there, and ran the same tasks. if memory belongs to the place, the new robot should be as good as the old one on day one.</p>
+        <h3>03 · Can a new robot inherit it?</h3>
+        <p>This is the test that matters for the idea. We took a robot that had never been in the home, gave it the memory written during the previous robot's time there, and ran the same tasks. If memory belongs to the place, the new robot should be as good as the old one on day one.</p>
       </div>
       <div class="measure-chart">
-        <svg viewBox="0 0 400 64" class="bars" role="img" aria-label="the new robot performed on par with the previous one">
-          <text x="0" y="14" font-family="Geist Mono, monospace" font-size="11" fill="#6f6f6f">previous</text>
-          <rect x="80" y="4" width="241" height="14" fill="#cfcfcf"/>
-          <text x="0" y="46" font-family="Geist Mono, monospace" font-size="11" fill="#111">new</text>
-          <rect x="80" y="36" width="241" height="14" fill="#d1201a"/>
-          <text x="327" y="47" font-family="Geist Mono, monospace" font-size="11" fill="#b81a15">on par</text>
+        <svg viewBox="0 0 400 64" class="bars" role="img" aria-label="The new robot performed on par with the previous one">
+          <text x="0" y="14" font-family="Geist Mono, monospace" font-size="11" fill="#6f6f6f">Previous</text>
+          <rect x="80" y="4" width="241" height="14" rx="2" fill="#cfcfcf"/>
+          <text x="0" y="46" font-family="Geist Mono, monospace" font-size="11" fill="#111">New</text>
+          <rect x="80" y="36" width="241" height="14" rx="2" fill="#d1201a"/>
+          <text x="327" y="47" font-family="Geist Mono, monospace" font-size="11" fill="#b81a15">On par</text>
         </svg>
-        <p class="result-delta"><em>inherited</em> · it performed up to par with the robot that had lived there</p>
+        <p class="result-delta"><em>Inherited</em> · It performed up to par with the robot that had lived there</p>
       </div>
     </div>
   </section>
 
   <section class="section">
-    <p class="label">what this does not show</p>
-    <h2 class="display-sm">read these as a reason to test on site, not as a promise.</h2>
+    <p class="label">What this does not show</p>
+    <h2 class="display-sm">Read these as a reason to test on site, not as a promise.</h2>
     <ul class="limits">
-      <li><b>it is a simulation.</b> real homes and warehouses are messier, sensors are noisier, and people move things without telling anyone. that is exactly what the on-site pilots are for.</li>
-      <li><b>the memory was the simplest possible.</b> plain text, no learned representation. we expect a better memory to do better, but we have not measured that here.</li>
-      <li><b>one environment type.</b> households. warehouses and mixed fleets, where several robots of different makers write into one memory, are the next thing to measure.</li>
-      <li><b>one model.</b> the same model in both conditions. the point was to isolate the effect of memory, not to compare models.</li>
+      <li><b>It is a simulation.</b> Real homes and warehouses are messier, sensors are noisier, and people move things without telling anyone. That is exactly what the on-site pilots are for.</li>
+      <li><b>The memory was the simplest possible.</b> Plain text, no learned representation. We expect a better memory to do better, but we have not measured that here.</li>
+      <li><b>One environment type.</b> Households. Warehouses and mixed fleets, where several robots of different makers write into one memory, are the next thing to measure.</li>
+      <li><b>One model.</b> The same model in both conditions. The point was to isolate the effect of memory, not to compare models.</li>
     </ul>
   </section>
 
   <section class="section section-contact">
-    <p class="label">next</p>
-    <h2 class="display-sm">the next numbers come from real sites.</h2>
-    <p class="lede">we are running the same comparison on real places with design partners: a facility with robots in it, an environment id, and a before and after. if that is your facility, we'd like to talk.</p>
+    <p class="label">Next</p>
+    <h2 class="display-sm">The next numbers come from real sites.</h2>
+    <p class="lede">We are running the same comparison on real places with design partners: a facility with robots in it, an environment ID, and a before and after. If that is your facility, we'd like to talk.</p>
     <div class="actions">
-      <a class="btn" href="../#contact">become a design partner</a>
-      <a class="link" href="../">← back to the overview</a>
+      <a class="btn" href="../#contact">Become a design partner</a>
+      <a class="link" href="../">← Back to the overview</a>
     </div>
   </section>
 
 </main>
 
 <footer class="footer">
-  <p>© 2026 manens</p>
-  <p>design inspired by <a href="https://www.maximiliankaspar.com/" rel="noopener">maximilian kaspar</a></p>
+  <p>© 2026 Manens</p>
+  <p>Design inspired by <a href="https://www.maximiliankaspar.com/" rel="noopener">Maximilian Kaspar</a></p>
 </footer>
 
 </body>

@@ -2,7 +2,7 @@
 
 A static site: the home page and a results page. White, black, one red.
 No build step, no package manager, no third-party requests. The typographic
-feel (mono labels, one oversized lowercase headline) borrows from
+feel (tracked mono caps for labels, one oversized tight headline) borrows from
 [maximiliankaspar.com](https://www.maximiliankaspar.com/), credited in the footer.
 
 ---
@@ -34,7 +34,7 @@ it will in production. Edit a file, reload.
 
 ## Home page, top to bottom
 
-1. **Hero** — "the place remembers." beside a rotating brain.
+1. **Hero** — "The place remembers." beside a rotating brain.
 2. **Product** — two robots put the glasses away on a 12-second loop. Both
    are trained; only one knows this household keeps glasses on the left
    shelf. The one without memory puts them on the right and a person moves

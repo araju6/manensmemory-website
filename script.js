@@ -221,8 +221,8 @@
   if (compare) {
     var LOOP = 12, START = 0.8, WALK = 3.2, PICK = 0.42;   // PICK: fraction of the path where the table is
     var runs = [
-      { key: 'without', shelf: [210, 50], fixAt: 6.0, done: 'wrong shelf · fixed by a person, again' },
-      { key: 'with',    shelf: [110, 50],             done: 'right shelf, first time' }
+      { key: 'without', shelf: [210, 50], fixAt: 6.0, done: 'Wrong shelf · fixed by a person, again' },
+      { key: 'with',    shelf: [110, 50],             done: 'Right shelf, first time' }
     ];
     runs.forEach(function (run) {
       var panel = compare.querySelector('.panel-' + run.key);
@@ -257,7 +257,7 @@
 
         var fixed = run.fixAt && lt >= run.fixAt;
         run.flag.setAttribute('opacity', (run.fixAt ? fixed : f >= PICK) ? '1' : '0');
-        run.status.textContent = lt < START ? 'idle' : f < PICK ? 'to the table' : f < 1 ? 'to the cabinet' : fixed ? 'corrected' : 'placed';
+        run.status.textContent = lt < START ? 'Idle' : f < PICK ? 'To the table' : f < 1 ? 'To the cabinet' : fixed ? 'Corrected' : 'Placed';
         run.result.textContent = f >= 1 ? run.done : '—';
       });
     }
